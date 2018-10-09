@@ -2,8 +2,9 @@ Walker[] bob;
 
 void setup()
 {
+  
   size(500,500);
-  bob = new Walker[1000];
+  bob = new Walker[20];
   for(int i=0; i < bob.length; i++)
   {
     bob[i] = new Walker();
@@ -11,12 +12,13 @@ void setup()
 }
 void draw()
 {
-  background(0);
+  background(#F0A5EF);
     for(int i=0; i < bob.length; i++)
   {
   bob[i].show();
   bob[i].walk();
   }
+ 
 }
 class Walker
 {
@@ -43,5 +45,14 @@ class Walker
     ellipse(myX+5,myY-6,4,4);
     ellipse(myX-4,myY-10,4,4);
     ellipse(myX+2,myY+8,4,4);
+    if (mouseX > myX)
+    {
+    myX= myX + (int)(Math.random()*10)-2;
+    }
+    else 
+    {
+      myX = myX + (int)(Math.random()*3)-9;
+    }
   }
 }
+
