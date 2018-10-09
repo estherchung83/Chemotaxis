@@ -20,11 +20,11 @@ void draw()
 }
 class Walker
 {
-  int myX, myY,c1,c2;
+  int myX, myY;
   Walker()
   {
-    myX = myY = 300;
-    c1 = c2= (int)(Math.random()*257) - 1;
+    myX = myY = 250;
+    
   }
   void walk()
   {
@@ -33,7 +33,15 @@ class Walker
   }
   void show()
   {
-    fill(c1,c2,255);
-    ellipse(myX,myY,40,40);
+    fill(#764900);
+    ellipse(myX,myY,30,30);
+    fill(#3E2600);
+    ellipse(myX-10,myY-3,4,4);
+    ellipse(myX+10,myY+5,4,4);
+    ellipse(myX-3,myY+8,4,4);
+    ellipse(myX-1,myY-1,4,4);
+    ellipse(myX+5,myY-6,4,4);
+    ellipse(myX-4,myY-10,4,4);
+    ellipse(myX+2,myY+8,4,4);
   }
 }
